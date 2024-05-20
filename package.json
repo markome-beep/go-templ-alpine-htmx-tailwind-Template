@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "css": "npx tailwindcss -i ./src/input.css -o ./static/output.css",
-    "build": "webpack --config ./webpack.config.js",
+    "build": "webpack --config ./webpack.config.js && go mod tidy",
     "app": "npm run css && templ generate && go run ./cmd/main.go"
   },
   "dependencies": {
